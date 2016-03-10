@@ -1,0 +1,22 @@
+.cars-options-wrapper
+{
+  width: 262px;
+  height: 330px;
+  background: #ffffff;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+  line-height: 1.3;
+  color: #848c8b;
+
+  .cars-options
+  {
+    display: flex;
+    flex-direction: column;
+    padding: 11px 16px;
+
+    label, .pseudo-input-wrapper
+    {
+      margin: 5px 0;
+    }
+  }
+}
