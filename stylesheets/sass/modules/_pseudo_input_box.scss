@@ -1,8 +1,9 @@
 .pseudo-input-wrapper
 {
   border-radius: 2px;
-  border: solid 1px #848c8b;
+  border: 1px solid #848c8b;
   background-color: #ffffff;
+  transition: border .2s ease-in-out, box-shadow .2s ease-in-out;
 
   .pseudo-input
   {
@@ -23,4 +24,10 @@
       color: #153d39;
     }
   }
+}
+
+.on-enter
+{
+  border: 1px solid blue;
+  box-shadow: 0 0 5px blue;
 }

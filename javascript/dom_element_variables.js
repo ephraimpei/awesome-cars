@@ -18,3 +18,8 @@ const tradeInSliderMarker = $(".slider-marker.trade-in-value");
 // elements where error messages will be prepended to
 const priceInputWrapper = $(".price-input-wrapper");
 const tradeInValueWrapper = $(".trade-in-value-wrapper");
+
+// elements where outline border will fade in/out if user makes valid form submission
+const purchasePriceBox = $(".price-input-wrapper");
+const tradeInValueBox = $(".trade-in-value-input-wrapper");
+const tradeInPercentBox = $(".trade-in-percent-input-wrapper");

@@ -1,5 +1,6 @@
 'use strict';
 
+// Fisher Yates shuffle
 Array.prototype.shuffle = function () {
   let currentIndex = this.length, temporaryValue, randomIndex;
 
@@ -18,3 +19,10 @@ Array.prototype.shuffle = function () {
 
   return this;
 }
+
+// fades in and out a blue border around input box argument
+// lets users know he/she just made a valid form submission
+const fadeInputBoxOutline = (inputBox) => {
+  inputBox.addClass("on-enter");
+  setTimeout(() => inputBox.removeClass("on-enter"), 500);
+};

@@ -34,8 +34,9 @@ body {
 
 .pseudo-input-wrapper {
   border-radius: 2px;
-  border: solid 1px #848c8b;
-  background-color: #ffffff; }
+  border: 1px solid #848c8b;
+  background-color: #ffffff;
+  transition: border .2s ease-in-out, box-shadow .2s ease-in-out; }
   .pseudo-input-wrapper .pseudo-input {
     padding-left: 10px;
     font-size: 16px; }
@@ -47,6 +48,10 @@ body {
       font-size: 16px;
       line-height: 1.7;
       color: #153d39; }
+
+.on-enter {
+  border: 1px solid blue;
+  box-shadow: 0 0 5px blue; }
 
 .approval-range-wrapper {
   margin: 20px 0; }
@@ -87,6 +92,10 @@ body {
       background: #31766f; }
     .approval-range-wrapper .slider-wrapper .slider progress::-moz-progress-bar {
       background: #31766f; }
+
+.error-message {
+  color: red;
+  font-size: 12px; }
 
 .navbar {
   background-color: #76bcc2;

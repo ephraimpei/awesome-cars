@@ -5,6 +5,8 @@ const createDataSet = (n, ceiling) => {
 
   // create an array from 0 to dataSetSize
   const dataSetArray = Array.apply(0, Array(dataSetSize)).map( (undefined, idx) => idx );
+
+  // colors array is shuffled to get the sense that new data has been fetched
   const carColors = ["black", "blue", "green", "red", "silver", "yellow"].shuffle();
 
   // create the cars data set w/ functional programming techniques :)
