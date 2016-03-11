@@ -23,8 +23,46 @@
 
           <div class="pseudo-input-wrapper">
             <div class="pseudo-input">
-              <span class="pseudo-content">$</span>
+              <span class="pseudo-content-curr">$</span>
               <input type="text" class="price-input">
+            </div>
+          </div>
+
+          <div class="approval-range-wrapper">
+            <label>Your approval range</label>
+
+            <div class="slider-wrapper">
+              <span class="slider-min">$0</span>
+              <progress class="purchase-price-slider-bar" value="30000" max="100000"></progress>
+              <span class="slider-max">$100000</span>
+            </div>
+          </div>
+
+          <label>Trade-in value</label>
+
+          <div class="trade-in-value-wrapper">
+            <div class="pseudo-input-wrapper">
+              <div class="pseudo-input">
+                <span class="pseudo-content-curr">$</span>
+                <input type="text" class="trade-in-input">
+              </div>
+            </div>
+
+            <div class="pseudo-input-wrapper">
+              <div class="pseudo-input">
+                <input type="text" class="trade-in-percent">
+                <span class="pseudo-content-percent">%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="approval-range-wrapper">
+            <label>Your approval range</label>
+
+            <div class="slider-wrapper">
+              <span class="slider-min">0%</span>
+              <progress class="trade-in-value-slider-bar" value="20" max="100"></progress>
+              <span class="slider-max">100%</span>
             </div>
           </div>
         </div>

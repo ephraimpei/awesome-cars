@@ -38,7 +38,7 @@ body {
   background-color: #ffffff; }
   .pseudo-input-wrapper .pseudo-input {
     padding: 0 10px; }
-    .pseudo-input-wrapper .pseudo-input .pseudo-content {
+    .pseudo-input-wrapper .pseudo-input .pseudo-content-curr {
       padding-right: 3px; }
     .pseudo-input-wrapper .pseudo-input input {
       border: 0;
@@ -62,7 +62,6 @@ body {
 
 .cars-options-wrapper {
   width: 262px;
-  height: 330px;
   background: #ffffff;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
   font-size: 14px;
@@ -74,5 +73,24 @@ body {
     padding: 11px 16px; }
     .cars-options-wrapper .cars-options label, .cars-options-wrapper .cars-options .pseudo-input-wrapper {
       margin: 5px 0; }
+    .cars-options-wrapper .cars-options .approval-range-wrapper {
+      margin: 15px 0; }
+      .cars-options-wrapper .cars-options .approval-range-wrapper label {
+        display: block;
+        text-align: center;
+        font-size: 12px;
+        line-height: 16px;
+        color: #47abb4; }
+
+.trade-in-value-wrapper {
+  display: flex;
+  flex-direction: row; }
+  .trade-in-value-wrapper .pseudo-input-wrapper .pseudo-input .trade-in-input, .trade-in-value-wrapper .pseudo-input-wrapper .pseudo-input .trade-in-percent {
+    width: 50%; }
+  .trade-in-value-wrapper .pseudo-input-wrapper:nth-child(1) {
+    width: 60%;
+    margin-right: 10%; }
+  .trade-in-value-wrapper .pseudo-input-wrapper:nth-child(2) {
+    width: 30%; }
 
 /*# sourceMappingURL=main.css.map */
