@@ -1,0 +1,70 @@
+.approval-range-wrapper
+{
+  margin: 20px 0;
+
+  label
+  {
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    line-height: 16px;
+    color: #47abb4;
+  }
+
+  .slider-wrapper
+  {
+    .slider
+    {
+      position: relative;
+      display: inline-block;
+
+      .slider-marker
+      {
+        border-radius: 50%;
+        width: 10px;
+        display: block;
+        height: 10px;
+        background: #31766f;
+        position: absolute;
+        margin-left: -4.5px;
+        top: 50%;
+        margin-top: -4.5px;
+      }
+
+      .slider-marker.purchase-price
+      {
+        left: 30%;
+      }
+
+      .slider-marker.trade-in-value
+      {
+        left: 20%;
+      }
+
+      progress
+      {
+        color: #31766f;
+        background: #ffffff;
+        border: 1px solid #31766f;
+        height: 4px;
+        border-radius: 4px;
+        vertical-align: middle;
+      }
+
+      // progress element is translated differently depending on browser
+
+      // Chrome and Safari
+      progress::-webkit-progress-bar {
+        background: #ffffff;
+      }
+      progress::-webkit-progress-value {
+        background: #31766f;
+      }
+
+      // Firefox
+      progress::-moz-progress-bar {
+        background: #31766f;
+      }
+    }
+  }
+}

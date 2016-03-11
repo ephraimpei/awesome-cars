@@ -1,9 +1,10 @@
 // utilities (clearfix, mixins, variables, reset)
 @import "./utilities/all";
 
-// base
+// modules (base, pseudo input box, approval sliders)
 @import "./modules/base";
 @import "./modules/pseudo_input_box";
+@import "./modules/approval_sliders";
 
 // components
 @import "./components/navbar";

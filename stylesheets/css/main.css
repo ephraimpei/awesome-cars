@@ -37,7 +37,8 @@ body {
   border: solid 1px #848c8b;
   background-color: #ffffff; }
   .pseudo-input-wrapper .pseudo-input {
-    padding: 0 10px; }
+    padding: 0 10px;
+    font-size: 16px; }
     .pseudo-input-wrapper .pseudo-input .pseudo-content-curr {
       padding-right: 3px; }
     .pseudo-input-wrapper .pseudo-input input {
@@ -46,6 +47,45 @@ body {
       font-size: 16px;
       line-height: 1.7;
       color: #153d39; }
+
+.approval-range-wrapper {
+  margin: 20px 0; }
+  .approval-range-wrapper label {
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    line-height: 16px;
+    color: #47abb4; }
+  .approval-range-wrapper .slider-wrapper .slider {
+    position: relative;
+    display: inline-block; }
+    .approval-range-wrapper .slider-wrapper .slider .slider-marker {
+      border-radius: 50%;
+      width: 10px;
+      display: block;
+      height: 10px;
+      background: #31766f;
+      position: absolute;
+      margin-left: -4.5px;
+      top: 50%;
+      margin-top: -4.5px; }
+    .approval-range-wrapper .slider-wrapper .slider .slider-marker.purchase-price {
+      left: 30%; }
+    .approval-range-wrapper .slider-wrapper .slider .slider-marker.trade-in-value {
+      left: 20%; }
+    .approval-range-wrapper .slider-wrapper .slider progress {
+      color: #31766f;
+      background: #ffffff;
+      border: 1px solid #31766f;
+      height: 4px;
+      border-radius: 4px;
+      vertical-align: middle; }
+    .approval-range-wrapper .slider-wrapper .slider progress::-webkit-progress-bar {
+      background: #ffffff; }
+    .approval-range-wrapper .slider-wrapper .slider progress::-webkit-progress-value {
+      background: #31766f; }
+    .approval-range-wrapper .slider-wrapper .slider progress::-moz-progress-bar {
+      background: #31766f; }
 
 .navbar {
   background-color: #76bcc2;
@@ -71,16 +111,8 @@ body {
     display: flex;
     flex-direction: column;
     padding: 11px 16px; }
-    .cars-options-wrapper .cars-options label, .cars-options-wrapper .cars-options .pseudo-input-wrapper {
+    .cars-options-wrapper .cars-options label {
       margin: 5px 0; }
-    .cars-options-wrapper .cars-options .approval-range-wrapper {
-      margin: 15px 0; }
-      .cars-options-wrapper .cars-options .approval-range-wrapper label {
-        display: block;
-        text-align: center;
-        font-size: 12px;
-        line-height: 16px;
-        color: #47abb4; }
 
 .trade-in-value-wrapper {
   display: flex;

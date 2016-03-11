@@ -24,7 +24,7 @@
           <div class="pseudo-input-wrapper">
             <div class="pseudo-input">
               <span class="pseudo-content-curr">$</span>
-              <input type="text" class="price-input">
+              <input type="text" class="price-input" value="30000">
             </div>
           </div>
 
@@ -33,7 +33,12 @@
 
             <div class="slider-wrapper">
               <span class="slider-min">$0</span>
-              <progress class="purchase-price-slider-bar" value="30000" max="100000"></progress>
+
+              <div class="slider">
+                <span class="slider-marker purchase-price"></span>
+                <progress class="purchase-price-slider-bar" value="30000" max="100000"></progress>
+              </div>
+
               <span class="slider-max">$100000</span>
             </div>
           </div>
@@ -44,13 +49,13 @@
             <div class="pseudo-input-wrapper">
               <div class="pseudo-input">
                 <span class="pseudo-content-curr">$</span>
-                <input type="text" class="trade-in-input">
+                <input type="text" class="trade-in-input" value="6000">
               </div>
             </div>
 
             <div class="pseudo-input-wrapper">
               <div class="pseudo-input">
-                <input type="text" class="trade-in-percent">
+                <input type="text" class="trade-in-percent" value="20">
                 <span class="pseudo-content-percent">%</span>
               </div>
             </div>
@@ -61,7 +66,12 @@
 
             <div class="slider-wrapper">
               <span class="slider-min">0%</span>
-              <progress class="trade-in-value-slider-bar" value="20" max="100"></progress>
+
+              <div class="slider">
+                <span class="slider-marker trade-in-value"></span>
+                <progress class="trade-in-value-slider-bar" value="20" max="100"></progress>
+              </div>
+
               <span class="slider-max">100%</span>
             </div>
           </div>
