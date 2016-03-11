@@ -11,7 +11,7 @@ const createDataSet = (n) => {
   const carsDataSet = dataSetArray.map( (n) => {
     const color = carColors[(n % carColors.length)];
     const name = `${ color } car`;
-    const imageURL = `image-car-${ color }-2x.png`;
+    const imageURL = `./images/image-car-${ color }-2x.png`;
     const price = Math.floor(Math.random() * (maxPrice - minPrice + 1)) + minPrice;
     const priceUSDFormat = "$" + price.toLocaleString();
 
