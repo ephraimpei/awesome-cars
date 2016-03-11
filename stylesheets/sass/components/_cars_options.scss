@@ -29,7 +29,11 @@
   {
     .pseudo-input
     {
-      .trade-in-input, .trade-in-percent
+      .trade-in-input
+      {
+        width: 60%;
+      }
+      .trade-in-percent
       {
         width: 50%;
       }
