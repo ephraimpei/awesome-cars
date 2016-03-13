@@ -1,21 +1,54 @@
-.cars-index
+.cars-index-wrapper
 {
-  width: 700px;
-  margin-left: 30px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  
-  h3
+  .cars-index
   {
-    font-size: 38px;
-    line-height: 42px;
-    color: #153d39;
+    width: 700px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    h3
+    {
+      font-size: 38px;
+      line-height: 42px;
+      color: #153d39;
+    }
+
+    p
+    {
+      font-size: 18px;
+      color: #848c8b;
+    }
   }
 
-  p
+  .load-more
   {
-    font-size: 18px;
-    color: #848c8b;
+    display: block;
+    margin: 0 auto;
+    outline: 0;
+    width: 100px;
+    height: 50px;
+    background: #ffffff;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .load-more:hover, .load-more.disabled
+  {
+    background: #eeeeee;
+  }
+
+  .load-more:active
+  {
+    box-shadow: inset 0 5px 30px #193047;
+  }
+
+  label.no-more-data
+  {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
   }
 }

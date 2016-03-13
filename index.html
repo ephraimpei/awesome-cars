@@ -78,9 +78,13 @@
         </div>
       </aside>
 
-      <section class="cars-index group">
-        <h3>Available cars</h3>
-        <p>You can adjust the purchase price and/or trade-in value of your loan. The cars for which you qualify will update accordingly.</p>
+      <section class="cars-index-wrapper">
+        <div class="cars-index group">
+          <h3>Available cars</h3>
+          <p>You can adjust the purchase price and/or trade-in value of your loan. The cars for which you qualify will update accordingly.</p>
+        </div>
+
+        <button class="load-more">Load More</button>
       </section>
     </main>
 
@@ -92,12 +96,11 @@
 
     <!-- Local scripts -->
     <script src="./javascript/utilities.js"></script>
-    <script src="./javascript/create_data_set.js"></script>
-    <script src="./javascript/create_car_index_items.js"></script>
     <script src="./javascript/dom_element_variables.js"></script>
-    <script src="./javascript/create_initial_data.js"></script>
+    <script src="./javascript/initialize.js"></script>
     <script src="./javascript/car_options_input_validators.js"></script>
     <script src="./javascript/car_options_error_handlers.js"></script>
     <script src="./javascript/car_options_listeners.js"></script>
+    <script src="./javascript/infinite_scroll_listener.js"></script>
   </body>
 </html>

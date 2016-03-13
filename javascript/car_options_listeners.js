@@ -48,6 +48,7 @@ priceInput.keypress( (e) => {
       const price = parseInt(input);
       const percent = parseInt(currentPercent);
 
+      newDataHandler();
       updateTradeInInputValue(price, percent);
       updatePriceSlider(price);
       getNewData(price);
