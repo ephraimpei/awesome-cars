@@ -2,7 +2,7 @@
 
 // Purchase Price input box
 const checkAndRemovePurchasePriceErrMessages = () => {
-  if ($(".invalid-price-message").show()) {
+  if ($(".invalid-price-message").length > 0) {
     $(".invalid-price-message").remove();
   }
 };
@@ -15,7 +15,7 @@ const getNewData = (price) => {
 };
 
 const updateTradeInInputValue = (price, percent) => {
-  const updatedTradeInValue = price * percent;
+  const updatedTradeInValue = (price * percent) / 100;
 
   // round trade in value to 2 decimal places
   // tradeInInput.val(Math.round(updatedTradeInValue * 100) / 100)
@@ -36,33 +36,32 @@ priceInput.keypress( (e) => {
   if (e.which === 13) {
     const input = e.currentTarget.value;
     const currentPercent = parseInt(percentInput.val());
-    const priceValidityResult = priceValidityChecker(input, currentPercent);
+    const validityEventType = priceValidityChecker(input, currentPercent);
 
     // if input is valid, create (fetch) new content and update other fields
     // else create error message
-    if (priceValidityResult === 0) {
+    if (validityEventType === 0) {
       fadeInputBoxOutline(purchasePriceBox);
       fadeInputBoxOutline(tradeInValueBox);
 
       priceInput.val(input);
       const price = parseInt(input);
-      const percent = parseInt(currentPercent) / 100;
+      const percent = parseInt(currentPercent);
 
       updateTradeInInputValue(price, percent);
       updatePriceSlider(price);
       getNewData(price);
     } else {
-      createInvalidPriceMessage(priceValidityResult);
+      const errMsg = getErrorMessage("purchase-price", validityEventType);
+      appendErrMsgHandler(errMsg);
     }
   }
 });
 
 // Trade-in Value input box
 const checkAndRemoveTradeInErrMessages = () => {
-  if ($(".invalid-trade-in-value-message").show()) {
-    $(".invalid-trade-in-value-message").remove();
-  } else if($(".invalid-trade-in-percent-message")) {
-    $(".invalid-trade-in-percent-message").remove();
+  if ($(".invalid-trade-in-message").length > 0) {
+    $(".invalid-trade-in-message").remove();
   }
 };
 
@@ -86,11 +85,11 @@ tradeInInput.keypress( (e) => {
     const input = e.currentTarget.value;
     const currentPrice = parseInt(priceInput.val());
 
-    const tradeInValidityResult = tradeInValidityChecker(input, currentPrice);
+    const validityEventType = tradeInValidityChecker(input, currentPrice);
 
     // if input is valid, update other fields
     // else create error message
-    if (tradeInValidityResult === 0) {
+    if (validityEventType === 0) {
       fadeInputBoxOutline(tradeInPercentBox);
       fadeInputBoxOutline(tradeInValueBox);
 
@@ -99,12 +98,18 @@ tradeInInput.keypress( (e) => {
 
       updateTradeInPercentageValue(tradeInValue, currentPrice);
     } else {
-      createInvalidTradeInMessage(tradeInValidityResult, currentPrice);
+      const errMsg = getErrorMessage("trade-in-value", validityEventType, currentPrice);
+      appendErrMsgHandler(errMsg);
     }
   }
 });
 
 // Trade-in Percentage input box
+const updateTradeInPercentSlider = (percent) => {
+  tradeInSlider.val(percent);
+  tradeInSliderMarker.css("left", percent + "%");
+};
+
 percentInput.on("input", (e) => {
   checkAndRemoveTradeInErrMessages();
 });
@@ -114,19 +119,21 @@ percentInput.keypress( (e) => {
     const input = e.currentTarget.value;
     const currentPrice = parseInt(priceInput.val());
 
-    const percentValidityResult = percentageValidityChecker(input, currentPrice);
+    const validityEventType = percentageValidityChecker(input, currentPrice);
 
     // if input is valid, update other fields
     // else create error message
-    if (percentValidityResult === 0) {
+    if (validityEventType === 0) {
       fadeInputBoxOutline(tradeInPercentBox);
       fadeInputBoxOutline(tradeInValueBox);
 
       percentInput.val(input);
-      const percent = parseInt(input) / 100;
+      const percent = parseInt(input);
       updateTradeInInputValue(currentPrice, percent);
+      updateTradeInPercentSlider(percent);
     } else {
-      createInvalidPercentageMessage(percentValidityResult);
+      const errMsg = getErrorMessage("trade-in-percent", validityEventType);
+      appendErrMsgHandler(errMsg);
     }
   }
 });
