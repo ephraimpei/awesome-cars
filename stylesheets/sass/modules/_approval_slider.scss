@@ -13,10 +13,20 @@
 
   .slider-wrapper
   {
+    span:first-child
+    {
+      margin-right: 5px;
+    }
+
+    span:last-child
+    {
+      margin-left: 5px;
+    }
+
     .slider
     {
       display: inline-block;
-      width: 162px;
+      width: 152px;
       vertical-align: middle;
 
       .ui-slider-range

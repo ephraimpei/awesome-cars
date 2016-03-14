@@ -37,9 +37,6 @@ percentSlider.slider({
   slide: (event, ui) => {
     percentInput.val(ui.value);
     tradeInInput.val(Math.round(priceInput.val() * (parseInt(ui.value) / 100)));
-  },
-  stop: (event, ui) => {
-
   }
 });
 
