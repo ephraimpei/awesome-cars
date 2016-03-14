@@ -1,6 +1,6 @@
 # Awesome cars site
 
-To check out the site - clone the repo and then open the [`index.html`](./index.html) file.
+To check out the site - clone the repo and then open the [`index.html`](./index.html) file in your browser.
 
 ## Summary
 
