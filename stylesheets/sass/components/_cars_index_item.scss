@@ -43,3 +43,26 @@
 {
   margin-top: 20px;
 }
+
+@media screen and (max-width: 800px)
+{
+  
+}
+
+@media screen and (max-width: 414px)
+{
+  .cars-index-item
+  {
+    width: 260px;
+  }
+
+  .car-index-item:nth-child(2n)
+  {
+    margin-left: 0;
+  }
+
+  .car-index-item:last-child
+  {
+    margin-bottom: 20px;
+  }
+}

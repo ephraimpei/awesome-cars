@@ -1,7 +1,7 @@
 .cars-options-wrapper
 {
   width: 262px;
-
+  transition: left .2s ease-in-out;
   .cars-options
   {
     display: flex;
@@ -16,6 +16,17 @@
     label
     {
       margin: 5px 0;
+    }
+  }
+}
+
+.pseudo-input-wrapper.price-input-wrapper
+{
+  .pseudo-input
+  {
+    .price-input
+    {
+      width: 80%;
     }
   }
 }
@@ -49,5 +60,14 @@
   .pseudo-input-wrapper:nth-child(2)
   {
     width: 30%;
+  }
+}
+
+@media screen and (max-width: 800px)
+{
+  .cars-options-wrapper
+  {
+    position: absolute;
+    left: -100%;
   }
 }

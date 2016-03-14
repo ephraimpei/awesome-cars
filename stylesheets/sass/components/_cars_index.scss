@@ -52,3 +52,27 @@
     margin-top: 20px;
   }
 }
+
+@media screen and (max-width: 800px)
+{
+  .cars-index-wrapper
+  {
+    width: 100%;
+
+    .cars-index
+    {
+      margin: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 414px)
+{
+  .cars-index-wrapper
+  {
+    .cars-index
+    {
+      width: 260px;
+    }
+  }
+}

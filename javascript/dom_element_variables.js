@@ -29,3 +29,6 @@ const tradeInPercentBox = $(".trade-in-percent-input-wrapper");
 
 // load more button - loads more data when clicked;
 const loadMoreButton = $(".load-more");
+
+// mobile menu icon
+const mobileMenuIcon = $(".mobile-menu-icon");

@@ -21,3 +21,8 @@ loadMoreButton.click( (e) => {
 
   carsIndex.append(createCarIndexItems(initDataSet));
 });
+
+// add click handler to mobile menu icon
+mobileMenuIcon.click( (e) => {
+
+});
