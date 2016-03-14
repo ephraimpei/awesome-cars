@@ -26,7 +26,9 @@
   }
 }
 
-@media screen and (max-width: 800px)
+/* tablets and phones - portrait and landscape modes */
+/* display menu icon */
+@media only screen and (max-width: 800px)
 {
   .navbar
   {

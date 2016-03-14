@@ -104,7 +104,9 @@ button {
       color: #eee;
       cursor: pointer; }
 
-@media screen and (max-width: 800px) {
+/* tablets and phones - portrait and landscape modes */
+/* display menu icon */
+@media only screen and (max-width: 800px) {
   .navbar .navbar-container .mobile-menu-icon {
     display: block; } }
 .available-cars-page {
@@ -144,7 +146,9 @@ button {
   .trade-in-value-wrapper .pseudo-input-wrapper:nth-child(2) {
     width: 30%; }
 
-@media screen and (max-width: 800px) {
+/* tablets and phones - portrait and landscape modes */
+/* hide car options form */
+@media only screen and (max-width: 800px) {
   .cars-options-wrapper {
     position: absolute;
     z-index: 1;
@@ -184,12 +188,21 @@ button {
   text-align: center;
   margin-top: 20px; }
 
-@media screen and (max-width: 800px) {
+/* tablets - portrait mode */
+@media only screen and (max-width: 800px) and (orientation: portrait) {
   .cars-index-wrapper {
     width: 100%; }
     .cars-index-wrapper .cars-index {
       margin: auto; } }
-@media screen and (max-width: 414px) {
+/* phones - landscape mode */
+@media only screen and (max-width: 736px) and (orientation: landscape) {
+  .cars-index-wrapper {
+    width: 100%; }
+    .cars-index-wrapper .cars-index {
+      margin: auto;
+      width: 550px; } }
+/* phones - portrait mode */
+@media only screen and (max-width: 414px) and (orientation: portrait) {
   .cars-index-wrapper .cars-index {
     width: 260px; } }
 .car-index-item {
@@ -220,9 +233,16 @@ button {
 .car-index-item:nth-child(n+2) {
   margin-top: 20px; }
 
-@media screen and (max-width: 414px) {
-  .cars-index-item {
-    width: 260px; }
+/* phones - landscape mode */
+@media only screen and (max-width: 736px) and (orientation: landscape) {
+  .car-index-item {
+    width: 225px;
+    height: 225px; } }
+/* phones - portrait mode */
+@media only screen and (max-width: 414px) and (orientation: portrait) {
+  .car-index-item {
+    width: 260px;
+    height: 260px; }
 
   .car-index-item:nth-child(2n) {
     margin-left: 0; }

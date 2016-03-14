@@ -53,7 +53,8 @@
   }
 }
 
-@media screen and (max-width: 800px)
+/* tablets - portrait mode */
+@media only screen and (max-width: 800px) and (orientation: portrait)
 {
   .cars-index-wrapper
   {
@@ -66,7 +67,23 @@
   }
 }
 
-@media screen and (max-width: 414px)
+/* phones - landscape mode */
+@media only screen and (max-width: 736px) and (orientation: landscape)
+{
+  .cars-index-wrapper
+  {
+    width: 100%;
+
+    .cars-index
+    {
+      margin: auto;
+      width: 550px;
+    }
+  }
+}
+
+/* phones - portrait mode */
+@media only screen and (max-width: 414px) and (orientation: portrait)
 {
   .cars-index-wrapper
   {

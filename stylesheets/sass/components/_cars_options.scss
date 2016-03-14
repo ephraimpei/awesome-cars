@@ -64,7 +64,9 @@
   }
 }
 
-@media screen and (max-width: 800px)
+/* tablets and phones - portrait and landscape modes */
+/* hide car options form */
+@media only screen and (max-width: 800px)
 {
   .cars-options-wrapper
   {

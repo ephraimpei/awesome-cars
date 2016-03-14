@@ -44,16 +44,23 @@
   margin-top: 20px;
 }
 
-@media screen and (max-width: 800px)
+/* phones - landscape mode */
+@media only screen and (max-width: 736px) and (orientation: landscape)
 {
-  
+  .car-index-item
+  {
+    width: 225px;
+    height: 225px;
+  }
 }
 
-@media screen and (max-width: 414px)
+/* phones - portrait mode */
+@media only screen and (max-width: 414px) and (orientation: portrait)
 {
-  .cars-index-item
+  .car-index-item
   {
     width: 260px;
+    height: 260px;
   }
 
   .car-index-item:nth-child(2n)
