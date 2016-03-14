@@ -23,8 +23,7 @@ const updateTradeInInputValue = (price, percent) => {
 };
 
 const updatePriceSlider = (price) => {
-  priceSlider.val(price);
-  priceSliderMarker.css("left", Math.floor((price / 100000) * 100) + "%");
+  priceSlider.slider("value", price);
 };
 
 priceInput.on("input", (e) => {
@@ -107,8 +106,9 @@ tradeInInput.keypress( (e) => {
 
 // Trade-in Percentage input box
 const updateTradeInPercentSlider = (percent) => {
-  tradeInSlider.val(percent);
-  tradeInSliderMarker.css("left", percent + "%");
+  // tradeInSlider.val(percent);
+  // tradeInSliderMarker.css("left", percent + "%");
+  percentSlider.slider("value", percent);
 };
 
 percentInput.on("input", (e) => {

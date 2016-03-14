@@ -6,66 +6,28 @@
   {
     display: block;
     text-align: center;
-    font-size: 12px;
-    line-height: 16px;
+    font-size: .75em;
+    line-height: 1em;
     color: #47abb4;
   }
 
   .slider-wrapper
   {
-    white-space: nowrap;
-    
     .slider
     {
-      position: relative;
       display: inline-block;
+      width: 162px;
+      vertical-align: middle;
 
-      .slider-marker
+      .ui-slider-range
       {
-        border-radius: 50%;
-        width: 10px;
-        display: block;
-        height: 10px;
-        background: #31766f;
-        position: absolute;
-        margin-left: -4.5px;
-        top: 50%;
-        margin-top: -4.5px;
-      }
-
-      .slider-marker.purchase-price
-      {
-        left: 30%;
-      }
-
-      .slider-marker.trade-in-value
-      {
-        left: 20%;
-      }
-
-      progress
-      {
-        color: #31766f;
-        background: #ffffff;
-        border: 1px solid #31766f;
-        height: 4px;
-        border-radius: 4px;
-        vertical-align: middle;
-        width: 165px;
-      }
-
-      // progress element is translated differently depending on browser
-
-      // Chrome and Safari
-      progress::-webkit-progress-bar {
-        background: #ffffff;
-      }
-      progress::-webkit-progress-value {
         background: #31766f;
       }
 
-      // Firefox
-      progress::-moz-progress-bar {
+      .ui-slider-handle
+      {
+        outline: 0;
+        cursor: pointer;
         background: #31766f;
       }
     }

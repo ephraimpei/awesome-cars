@@ -7,6 +7,9 @@
     <!-- Awesomecars local stylesheet -->
     <link rel="stylesheet" href="./stylesheets/css/main.css">
 
+    <!--  jQuery UI Base Theme -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css">
+
     <title>Awesome Cars! Awesome Deals! Just...AWESOME</title>
   </head>
   <body>
@@ -34,12 +37,7 @@
 
             <div class="slider-wrapper">
               <span class="slider-min">$0</span>
-
-              <div class="slider">
-                <span class="slider-marker purchase-price"></span>
-                <progress class="purchase-price-slider-bar" value="30000" max="100000"></progress>
-              </div>
-
+              <div class="slider purchase-price-slider"></div>
               <span class="slider-max">$100K</span>
             </div>
           </div>
@@ -67,6 +65,11 @@
 
             <div class="slider-wrapper">
               <span class="slider-min">0%</span>
+              <div class="slider percent-slider"></div>
+              <span class="slider-max">100%</span>
+            </div>
+            <!-- <div class="slider-wrapper">
+              <span class="slider-min">0%</span>
 
               <div class="slider">
                 <span class="slider-marker trade-in-value"></span>
@@ -74,7 +77,7 @@
               </div>
 
               <span class="slider-max">100%</span>
-            </div>
+            </div> -->
           </div>
         </div>
       </aside>
@@ -91,6 +94,9 @@
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+
+    <!-- jQuery UI -->
+    <script src="https://code.jquery.com/ui/1.9.2/jquery-ui.min.js"></script>
 
     <!-- Local scripts -->
     <script src="./javascript/utilities.js"></script>
