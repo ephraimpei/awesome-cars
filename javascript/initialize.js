@@ -24,5 +24,7 @@ loadMoreButton.click( (e) => {
 
 // add click handler to mobile menu icon
 mobileMenuIcon.click( (e) => {
+  e.preventDefault();
 
+  carOptionsForm.toggleClass("visible");
 });

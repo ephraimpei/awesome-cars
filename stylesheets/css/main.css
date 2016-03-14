@@ -126,6 +126,7 @@ button {
   .navbar .navbar-container .mobile-menu-icon {
     display: block; } }
 .available-cars-page {
+  position: relative;
   margin: 32px 0;
   display: flex;
   flex-direction: row; }
@@ -164,7 +165,11 @@ button {
 @media screen and (max-width: 800px) {
   .cars-options-wrapper {
     position: absolute;
-    left: -100%; } }
+    z-index: 1;
+    left: -262px; }
+
+  .cars-options-wrapper.visible {
+    left: 0; } }
 .cars-index-wrapper .cars-index {
   width: 700px;
   margin-left: 30px;

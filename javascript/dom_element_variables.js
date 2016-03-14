@@ -32,3 +32,6 @@ const loadMoreButton = $(".load-more");
 
 // mobile menu icon
 const mobileMenuIcon = $(".mobile-menu-icon");
+
+// car options form
+const carOptionsForm = $(".cars-options-wrapper");
