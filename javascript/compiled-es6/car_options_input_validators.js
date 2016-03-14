@@ -4,7 +4,8 @@ var priceValidityChecker = function priceValidityChecker(input, currentPercent) 
   // price validity event types:
   // 0 - input is valid
   // 1 - input is not a number
-  // 2 - number is not between 0 and 100000
+  // 2 - percent input is not a number
+  // 3 - number is not between 0 and 100000
   var coercedInput = parseInt(input);
 
   if (isNaN(coercedInput)) {

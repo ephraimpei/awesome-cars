@@ -1,6 +1,8 @@
 'use strict';
 
-// Purchase Price input box
+// ----------------------------------------------
+// Purchase Price input box helpers and listeners
+// ----------------------------------------------
 const checkAndRemovePurchasePriceErrMessages = () => {
   if ($(".invalid-price-message").length > 0) {
     $(".invalid-price-message").remove();
@@ -17,8 +19,6 @@ const getNewData = (price) => {
 const updateTradeInInputValue = (price, percent) => {
   const updatedTradeInValue = (price * percent) / 100;
 
-  // round trade in value to 2 decimal places
-  // tradeInInput.val(Math.round(updatedTradeInValue * 100) / 100)
   tradeInInput.val(Math.round(updatedTradeInValue))
 };
 
@@ -58,7 +58,9 @@ priceInput.keypress( (e) => {
   }
 });
 
+// ----------------------------------------------
 // Trade-in Value input box
+// ----------------------------------------------
 const checkAndRemoveTradeInErrMessages = () => {
   if ($(".invalid-trade-in-message").length > 0) {
     $(".invalid-trade-in-message").remove();
@@ -104,10 +106,10 @@ tradeInInput.keypress( (e) => {
   }
 });
 
+// ----------------------------------------------
 // Trade-in Percentage input box
+// ----------------------------------------------
 const updateTradeInPercentSlider = (percent) => {
-  // tradeInSlider.val(percent);
-  // tradeInSliderMarker.css("left", percent + "%");
   percentSlider.slider("value", percent);
 };
 
