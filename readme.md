@@ -20,6 +20,7 @@ This is an exercise to create a static page with the provided [`awesomecarsite-1
 
 * jQuery
 * jQuery - UI
+* Babel
 
 ### Decisions
 
@@ -27,3 +28,4 @@ This is an exercise to create a static page with the provided [`awesomecarsite-1
 * I implemented the 'infinite scroll' to load additional data when the user scrolls to the bottom of the page
 * Basic error handling was implemented into the car options form to ensure the user is providing a number value within the correct range (ie: when inputting trade in value, can't input a number greater than the current purchase price).
 * I used jQuery UI's slider instead of building my own since it didn't make sense to "re-invent the wheel" especially for something more complicated like sliders. I tried to style it just like the mock up, however I ran into bugs with the sliding functionality (particularly when the size of the sliding marker was adjusted).  Rather than spending an enormous amount of time to debug jQuery UI, I used most of jQuery UI's base styling with the exception of adding the colors provided from the specifications.
+# Lastly, I used babel-cli to compile my javascript into cross browser compatible files (they are primarily written in ES6 which isn't universally supported).
